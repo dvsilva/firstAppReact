@@ -8,3 +8,6 @@ npm install -D @babel/core @babel/preset-env @babel/preset-react babel-loader we
 npm run dev
 
 npm install -D webpack-dev-server
+
+//install prop types
+npm install prop-types
