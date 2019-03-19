@@ -11,3 +11,6 @@ npm install -D webpack-dev-server
 
 //install prop types
 npm install prop-types
+
+// props into component/class
+npm -D install @babel/plugin-proposal-class-properties
