@@ -14,3 +14,9 @@ npm install prop-types
 
 // props into component/class
 npm -D install @babel/plugin-proposal-class-properties
+
+// to import css
+npm install -D style-loader css-loader
+// to user sass
+npm install -D sass-loader
+npm install -D node-sass

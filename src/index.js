@@ -3,6 +3,8 @@ import { render } from "react-dom";
 
 import Button from "./Button";
 
+import "./style.scss";
+
 // statefull component
 class App extends Component {
   state = {
@@ -12,7 +14,7 @@ class App extends Component {
   componentDidMount() {}
 
   shouldComponentUpdate(nextProps, nextState) {
-    // veda execução do render
+    // veda execução do render p ganhar performance
     return nextState.counter <= 10;
   }
 
@@ -46,8 +48,8 @@ class App extends Component {
 
     return (
       <Fragment>
-        <h1>Hello Rocketseat</h1>
-        <h2>{this.state.counter}</h2>
+        <h1 className="title">Hello Rocketseat</h1>
+        <h2 style={{ color: "#f00" }}>{this.state.counter}</h2>
         <Button
           onClick={() => {
             alert("Botão");
