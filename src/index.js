@@ -1,31 +1,24 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
 import { render } from "react-dom";
 
-class Button extends Component {
-  static defaultProps = {
-    children: "Salvar"
-  };
+import Button from "./Button";
 
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string
-  };
-
-  render() {
-    //return <a href="">{this.props.title}</a>;
-    return (
-      <button onClick={this.props.onClick} style={{ background: "#F00" }}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
+// statefull component
 class App extends Component {
   state = {
     counter: 0
   };
+
+  componentDidMount() {}
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // veda execução do render
+    return nextState.counter <= 10;
+  }
+
+  componentDidUpdate(prevProps, prevState) {}
+
+  componentWillMount() {}
 
   // sobrepondo variaveis no estado
   handleClick = () => {
