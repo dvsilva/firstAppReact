@@ -30,8 +30,21 @@ class App extends Component {
   // sobrepondo variaveis no estado
   handleClick = () => {
     //alert("Botão clicado");
-    this.state.counter += 1;
-    this.setState({ counter: this.state.counter + 1 });
+    //this.state.counter += 1;
+
+    // não é estantâneo
+    // assíncrono / executa através de uma fila de alterações de estado
+    this.setState({ counter: this.state.counter + 1 }),
+      () => {
+        console.log(this.state.counter);
+      };
+
+    this.setState(state => {
+      counter: this.state.counter + 1;
+    });
+    this.setState(state => {
+      counter: this.state.counter + 1;
+    });
   };
 
   // quando altera estado/propriedade do component ele executa
